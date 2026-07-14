@@ -3,4 +3,4 @@
  * Import the CSS variables via `@raah/ui/tokens.css`.
  * Signature components (DayCard, WhyCallout, …) land from P3/P5.
  */
-export * from "./tokens/index.js";
+export * from "./tokens/index";

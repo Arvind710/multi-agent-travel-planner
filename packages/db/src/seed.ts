@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { createDb } from "./client.js";
-import { travellerProfiles, trips, users } from "./schema.js";
+import { createDb } from "./client";
+import { travellerProfiles, trips, users } from "./schema";
 
 /** Dev seed: one user, one profile, one draft trip. Idempotent via fixed email. */
 export async function seed(databaseUrl: string): Promise<void> {

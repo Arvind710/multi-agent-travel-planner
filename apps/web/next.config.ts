@@ -4,7 +4,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@raah/ui", "@raah/shared"],
+  transpilePackages: ["@raah/ui", "@raah/shared", "@raah/db"],
 };
 
 export default withNextIntl(nextConfig);

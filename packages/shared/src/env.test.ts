@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { loadEnv, resetEnvCache } from "./env.js";
+import { loadEnv, resetEnvCache } from "./env";
 
 describe("env", () => {
   afterEach(() => {

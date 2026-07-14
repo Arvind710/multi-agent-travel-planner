@@ -3,8 +3,8 @@ import { Worker, type Processor } from "bullmq";
 import { Redis } from "ioredis";
 import { loadEnv } from "@raah/shared/env";
 import { publishJobEvent } from "@raah/shared/events";
-import { logger } from "./logger.js";
-import { QUEUE, queueConcurrency, type QueueName } from "./queues.js";
+import { logger } from "./logger";
+import { QUEUE, queueConcurrency, type QueueName } from "./queues";
 
 const env = loadEnv();
 

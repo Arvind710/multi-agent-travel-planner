@@ -3,11 +3,11 @@ import cors from "@fastify/cors";
 import { fastifyTRPCPlugin } from "@trpc/server/adapters/fastify";
 import { createDb, pingDb } from "@raah/db";
 import { loadEnv } from "@raah/shared/env";
-import { logger } from "./logger.js";
-import { redis } from "./redis.js";
-import { appRouter } from "./router.js";
-import { createContext } from "./context.js";
-import { sseRoutes } from "./sse.js";
+import { logger } from "./logger";
+import { redis } from "./redis";
+import { appRouter } from "./router";
+import { createContext } from "./context";
+import { sseRoutes } from "./sse";
 
 const env = loadEnv();
 

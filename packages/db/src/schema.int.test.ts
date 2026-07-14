@@ -1,9 +1,9 @@
 import { execSync } from "node:child_process";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { eq } from "drizzle-orm";
-import { createDb, type Db } from "./client.js";
-import { runMigrations } from "./migrate.js";
-import { planGraphs, trips, users } from "./schema.js";
+import { createDb, type Db } from "./client";
+import { runMigrations } from "./migrate";
+import { planGraphs, trips, users } from "./schema";
 
 function dockerAvailable(): boolean {
   try {

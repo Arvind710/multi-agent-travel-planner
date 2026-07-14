@@ -1,7 +1,8 @@
 import type { CreateFastifyContextOptions } from "@trpc/server/adapters/fastify";
 import { createDb, type Db } from "@raah/db";
 import { loadEnv } from "@raah/shared/env";
-import { logger } from "./logger.js";
+import { logger } from "./logger";
+import { sessionFromCookieHeader } from "./session";
 
 const env = loadEnv();
 const { db } = createDb(env.DATABASE_URL);
@@ -18,14 +19,12 @@ export interface Context {
   session: Session;
 }
 
-/**
- * tRPC context per request. Session extraction is a stub until P0.9 wires
- * Auth.js JWT decoding + the anonymous-session cookie.
- */
-export function createContext({ req }: CreateFastifyContextOptions): Context {
+/** tRPC context per request: verified Auth.js JWT (no DB hit) + anonymous cookie. */
+export async function createContext({ req }: CreateFastifyContextOptions): Promise<Context> {
+  const session = await sessionFromCookieHeader(req.headers.cookie);
   return {
     db,
-    logger: logger.child({ reqId: req.id }),
-    session: { userId: null, anonymousId: null },
+    logger: logger.child({ reqId: req.id, userId: session.userId ?? undefined }),
+    session,
   };
 }

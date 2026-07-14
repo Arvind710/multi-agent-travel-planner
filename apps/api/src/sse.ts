@@ -5,7 +5,7 @@ import {
   jobEventsLogKey,
 } from "@raah/shared/events";
 import { loadEnv } from "@raah/shared/env";
-import { createSubscriber, redis } from "./redis.js";
+import { createSubscriber, redis } from "./redis";
 
 const env = loadEnv();
 

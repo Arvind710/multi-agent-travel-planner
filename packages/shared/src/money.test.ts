@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { addMoney, convert, formatINRCompact, formatMoney, inr, sumMoney } from "./money.js";
+import { addMoney, convert, formatINRCompact, formatMoney, inr, sumMoney } from "./money";
 
 describe("money (INR-first)", () => {
   it("formats INR with lakh/crore grouping (en-IN)", () => {

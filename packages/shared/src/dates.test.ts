@@ -8,7 +8,7 @@ import {
   monthOf,
   overlaps,
   toIST,
-} from "./dates.js";
+} from "./dates";
 
 describe("dates (IST-aware)", () => {
   it("istNow is anchored to Asia/Kolkata (+05:30, no DST)", () => {

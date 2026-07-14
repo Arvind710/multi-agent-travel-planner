@@ -1,6 +1,6 @@
 import { pingDb } from "@raah/db";
-import { enqueuePlanGenerate } from "./jobs.js";
-import { publicProcedure, router } from "./trpc.js";
+import { enqueuePlanGenerate } from "./jobs";
+import { publicProcedure, router } from "./trpc";
 
 /**
  * Root tRPC router. Domain routers (trip, intake, plan, export, watch, profile)

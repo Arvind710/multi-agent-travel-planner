@@ -6,7 +6,7 @@ import {
   jobEventsLogKey,
   publishJobEvent,
   type JobEventRedis,
-} from "./events.js";
+} from "./events";
 
 function fakeRedis() {
   const lists = new Map<string, string[]>();
