@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from "node:fs";
+import path from "node:path";
 import { z } from "zod";
 
 /**
@@ -54,11 +56,42 @@ const EnvSchema = z.object({
 
 export type Env = z.infer<typeof EnvSchema>;
 
+/**
+ * Load the repo-root .env into process.env (real env always wins).
+ * Next.js does this natively; the tsx-run apps (api, worker, mocks) need it here.
+ * Walks up from cwd so it works from any package directory.
+ */
+function loadDotenvFile(): void {
+  let dir = process.cwd();
+  for (let i = 0; i < 6; i++) {
+    const file = path.join(dir, ".env");
+    if (existsSync(file)) {
+      for (const line of readFileSync(file, "utf8").split("\n")) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith("#")) continue;
+        const eq = trimmed.indexOf("=");
+        if (eq === -1) continue;
+        const key = trimmed.slice(0, eq).trim();
+        const value = trimmed
+          .slice(eq + 1)
+          .trim()
+          .replace(/^["']|["']$/g, "");
+        if (!(key in process.env)) process.env[key] = value;
+      }
+      return;
+    }
+    const parent = path.dirname(dir);
+    if (parent === dir) return;
+    dir = parent;
+  }
+}
+
 let cached: Env | undefined;
 
 /** Parse (once) and return the validated environment. Throws with a readable report on invalid env. */
 export function loadEnv(): Env {
   if (!cached) {
+    loadDotenvFile();
     const parsed = EnvSchema.safeParse(process.env);
     if (!parsed.success) {
       throw new Error(`Invalid environment:\n${z.prettifyError(parsed.error)}`);
