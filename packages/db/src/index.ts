@@ -1,5 +1,7 @@
 /**
  * @raah/db — Drizzle schema + migrations for all ARCH §8.1 tables.
- * DETERMINISTIC PACKAGE: zero LLM calls (CI-enforced). Schema lands in P0.5.
+ * DETERMINISTIC PACKAGE: zero LLM calls (CI-enforced).
  */
-export const DB_PACKAGE = "@raah/db" as const;
+export * from "./schema.js";
+export { createDb, type Db } from "./client.js";
+export { runMigrations } from "./migrate.js";
