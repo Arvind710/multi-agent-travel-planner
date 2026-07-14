@@ -6,3 +6,6 @@
  */
 export * from "./ids";
 export * from "./schema";
+export * from "./nodes";
+export * from "./invariants";
+export * from "./patch";
