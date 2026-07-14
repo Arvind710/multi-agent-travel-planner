@@ -13,7 +13,7 @@ export default tseslint.config(
       "**/build/**",
       "Docs/**",
       "packages/db/drizzle/**",
-      "next-env.d.ts",
+      "**/next-env.d.ts",
     ],
   },
   ...tseslint.configs.strict,

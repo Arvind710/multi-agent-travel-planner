@@ -1,0 +1,26 @@
+{
+  "landing": {
+    "title": "Raah",
+    "tagline": "Describe your trip. Get a plan that shows its working.",
+    "stub": "Landing — PromptCanvas arrives in P3.10"
+  },
+  "stubs": {
+    "planNew": "Conversation surface — clarifiers + generation progress (P3.10)",
+    "trip": "The Itinerary Document (P5.4)",
+    "tripDay": "Day view (P5.5)",
+    "logistics": "Logistics dossier (P5.6)",
+    "budget": "Budget sheet (P5.6)",
+    "print": "Print/PDF route (P6.6)",
+    "share": "Shared trip view (P6.8)",
+    "trips": "Saved trips (P6.9)",
+    "profile": "Traveller profiles (P6.9)",
+    "inspiration": "Trip concept (P8.9)"
+  },
+  "dev": {
+    "sseTitle": "SSE heartbeat test (P0 exit gate)",
+    "sseIntro": "Enqueues a no-op plan.generate job and streams its events end-to-end: api → queue → worker → Redis → SSE → this page.",
+    "start": "Enqueue heartbeat job",
+    "running": "Streaming…",
+    "error": "Could not reach the api — is `pnpm dev` running with Docker up?"
+  }
+}
