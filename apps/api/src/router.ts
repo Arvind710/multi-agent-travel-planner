@@ -1,4 +1,5 @@
 import { pingDb } from "@raah/db";
+import { enqueuePlanGenerate } from "./jobs.js";
 import { publicProcedure, router } from "./trpc.js";
 
 /**
@@ -10,6 +11,13 @@ export const appRouter = router({
   dbCheck: publicProcedure.query(async ({ ctx }) => {
     await pingDb(ctx.db);
     return { db: "ok" as const };
+  }),
+  dev: router({
+    /** P0 exit-gate helper: enqueue the heartbeat job and watch it stream on /api/jobs/:id/events. */
+    enqueueHeartbeat: publicProcedure.mutation(async () => {
+      const jobId = await enqueuePlanGenerate({ kind: "heartbeat-smoke" });
+      return { jobId, events: `/api/jobs/${jobId}/events` };
+    }),
   }),
 });
 

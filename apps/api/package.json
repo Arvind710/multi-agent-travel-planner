@@ -16,9 +16,11 @@
     "@raah/db": "workspace:*",
     "@raah/shared": "workspace:*",
     "@trpc/server": "^11.18.0",
+    "bullmq": "^5.80.2",
     "fastify": "^5.10.0",
     "ioredis": "^5.11.1",
     "pino": "^10.3.1",
+    "ulid": "^3.0.2",
     "zod": "^4.4.3"
   },
   "devDependencies": {

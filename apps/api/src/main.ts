@@ -7,6 +7,7 @@ import { logger } from "./logger.js";
 import { redis } from "./redis.js";
 import { appRouter } from "./router.js";
 import { createContext } from "./context.js";
+import { sseRoutes } from "./sse.js";
 
 const env = loadEnv();
 
@@ -21,6 +22,8 @@ await app.register(fastifyTRPCPlugin, {
   prefix: "/trpc",
   trpcOptions: { router: appRouter, createContext },
 });
+
+await app.register(sseRoutes);
 
 // Liveness + dependency health (degraded ≠ down: api reports what it can reach).
 const { db } = createDb(env.DATABASE_URL);
