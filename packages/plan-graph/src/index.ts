@@ -9,3 +9,5 @@ export * from "./schema";
 export * from "./nodes";
 export * from "./invariants";
 export * from "./patch";
+export * from "./diff";
+export * from "./invalidate";
