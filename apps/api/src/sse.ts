@@ -1,9 +1,5 @@
 import type { FastifyPluginAsync } from "fastify";
-import {
-  JobEventEnvelope,
-  jobEventsChannel,
-  jobEventsLogKey,
-} from "@raah/shared/events";
+import { JobEventEnvelope, jobEventsChannel, jobEventsLogKey } from "@raah/shared/events";
 import { loadEnv } from "@raah/shared/env";
 import { createSubscriber, redis } from "./redis";
 
@@ -20,8 +16,7 @@ export const sseRoutes: FastifyPluginAsync = async (app) => {
     "/api/jobs/:id/events",
     async (req, reply) => {
       const jobId = req.params.id;
-      const lastSeen =
-        Number(req.headers["last-event-id"] ?? req.query.lastEventId ?? 0) || 0;
+      const lastSeen = Number(req.headers["last-event-id"] ?? req.query.lastEventId ?? 0) || 0;
 
       reply.hijack();
       const res = reply.raw;

@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: typecheck · lint · test · boundaries
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm boundaries
+      # ubuntu runners have Docker → the testcontainers db integration test runs here
+      - run: pnpm exec turbo run typecheck test
+
+  migrations:
+    name: migration gate (fresh DB apply + seed)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: raah
+          POSTGRES_PASSWORD: raah
+          POSTGRES_DB: raah
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U raah" --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:migrate && pnpm db:seed
+        env:
+          DATABASE_URL: postgres://raah:raah@localhost:5432/raah
+
+  web:
+    name: web build · Lighthouse budgets (perf + a11y/axe)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @raah/web build
+      # Lighthouse runs axe-core for its accessibility category — one tool
+      # covers both the perf-budget and a11y CI gates (ARCH §3.4, §4.5).
+      - run: pnpm dlx @lhci/cli@0.15.x autorun
+        env:
+          LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.sha }}
+
+  # Deploy (P7+): Vercel auto-deploys apps/web from its Git integration;
+  # api+worker deploy is a docker-compose pull+restart on the VPS — documented
+  # in /infra/README.md. No deploy from CI until a beta host exists.

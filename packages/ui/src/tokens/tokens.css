@@ -35,8 +35,7 @@
 
   /* ── type ── */
   --font-display: "Fraunces", "Noto Serif Devanagari", Georgia, serif;
-  --font-body:
-    "Inter", "Noto Sans", "Noto Sans Devanagari", -apple-system, system-ui, sans-serif;
+  --font-body: "Inter", "Noto Sans", "Noto Sans Devanagari", -apple-system, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Noto Sans Devanagari", ui-monospace, monospace;
 
   /* 1.25 modular scale; document body 17px (ARCH §4.1) */

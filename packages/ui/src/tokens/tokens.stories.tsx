@@ -72,15 +72,15 @@ export const Tokens = () => {
       >
         Type ramp
       </h2>
-      {(["--text-4xl", "--text-2xl", "--text-xl", "--text-doc", "--text-ui", "--text-sm"] as const).map(
-        (v) => (
-          <p key={v} style={{ fontSize: `var(${v})`, margin: "var(--space-2) 0" }}>
-            <span style={{ fontFamily: "var(--font-display)" }}>Udaipur before the crowds — </span>
-            <span>यात्रा शुरू होती है</span>{" "}
-            <code style={{ fontFamily: "var(--font-mono)", fontSize: "var(--text-xs)" }}>{v}</code>
-          </p>
-        ),
-      )}
+      {(
+        ["--text-4xl", "--text-2xl", "--text-xl", "--text-doc", "--text-ui", "--text-sm"] as const
+      ).map((v) => (
+        <p key={v} style={{ fontSize: `var(${v})`, margin: "var(--space-2) 0" }}>
+          <span style={{ fontFamily: "var(--font-display)" }}>Udaipur before the crowds — </span>
+          <span>यात्रा शुरू होती है</span>{" "}
+          <code style={{ fontFamily: "var(--font-mono)", fontSize: "var(--text-xs)" }}>{v}</code>
+        </p>
+      ))}
       <p style={{ fontFamily: "var(--font-mono)", fontSize: "var(--text-sm)" }}>
         Train 12958 · PNR 4521-8765-33 · 2A
       </p>
@@ -99,7 +99,9 @@ export const Tokens = () => {
           <code style={{ width: 90, fontFamily: "var(--font-mono)", fontSize: "var(--text-xs)" }}>
             --space-{s}
           </code>
-          <div style={{ height: 12, width: `var(--space-${s})`, background: "var(--color-accent)" }} />
+          <div
+            style={{ height: 12, width: `var(--space-${s})`, background: "var(--color-accent)" }}
+          />
         </div>
       ))}
     </div>

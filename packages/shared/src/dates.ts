@@ -44,12 +44,7 @@ export function daysBetween(aISO: ISODate, bISO: ISODate): number {
 }
 
 /** Do two inclusive date ranges overlap? */
-export function overlaps(
-  aStart: ISODate,
-  aEnd: ISODate,
-  bStart: ISODate,
-  bEnd: ISODate,
-): boolean {
+export function overlaps(aStart: ISODate, aEnd: ISODate, bStart: ISODate, bEnd: ISODate): boolean {
   const a = Interval.fromDateTimes(toIST(aStart).startOf("day"), toIST(aEnd).endOf("day"));
   const b = Interval.fromDateTimes(toIST(bStart).startOf("day"), toIST(bEnd).endOf("day"));
   return a.overlaps(b);

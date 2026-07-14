@@ -39,10 +39,7 @@ describe.skipIf(!hasDocker)("db schema round-trip (testcontainers)", () => {
   });
 
   it("migrations apply cleanly and a user→trip→plan_graph round-trips", async () => {
-    const [user] = await db
-      .insert(users)
-      .values({ email: "t@example.com", name: "T" })
-      .returning();
+    const [user] = await db.insert(users).values({ email: "t@example.com", name: "T" }).returning();
     expect(user?.id).toBeTruthy();
 
     const [trip] = await db
