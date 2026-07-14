@@ -8,7 +8,8 @@
   },
   "scripts": {
     "typecheck": "tsc",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run --coverage",
+    "fixtures:generate": "tsx scripts/generate-fixtures.ts"
   },
   "dependencies": {
     "@raah/shared": "workspace:*",
@@ -16,7 +17,9 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4",
     "fast-check": "^4.9.0",
+    "tsx": "^4",
     "typescript": "~5.9.3",
     "vitest": "^4.1.10"
   }

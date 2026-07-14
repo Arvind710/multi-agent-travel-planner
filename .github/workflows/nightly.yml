@@ -1,0 +1,23 @@
+name: Nightly
+
+on:
+  schedule:
+    # 21:30 UTC = 03:00 IST — off-hours for interactive work
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+jobs:
+  deep-property-tests:
+    name: property tests at 10k runs (implementation-plan P1.5)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run test --filter=@raah/plan-graph --filter=@raah/constraints
+        env:
+          FC_NUM_RUNS: 10000

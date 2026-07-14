@@ -31,6 +31,8 @@ export interface RemovedNode {
   node_id: NodeId;
   kind: NodeKind;
   label: string;
+  /** Parent day for blocks/meals — removing the parent removes the child too. */
+  parent_ref?: NodeId;
 }
 
 export interface ChangedNode {
@@ -123,7 +125,12 @@ export function diff(a: PlanGraph, b: PlanGraph): PlanDiff {
 
   for (const [id, entry] of aNodes) {
     if (!bNodes.has(id)) {
-      removed.push({ node_id: id, kind: entry.kind, label: labelOf(entry) });
+      removed.push({
+        node_id: id,
+        kind: entry.kind,
+        label: labelOf(entry),
+        parent_ref: parentOf(entry),
+      });
     }
   }
 
@@ -212,7 +219,10 @@ export function diff(a: PlanGraph, b: PlanGraph): PlanDiff {
 export function diffToPatches(planDiff: PlanDiff): GraphPatch {
   const patch: GraphPatch = [];
 
+  // Children of removed parents vanish with the parent — no separate op.
+  const removedIds = new Set(planDiff.removed.map((r) => r.node_id));
   for (const r of planDiff.removed) {
+    if (r.parent_ref && removedIds.has(r.parent_ref)) continue;
     patch.push({ op: "remove_node", node_id: r.node_id });
   }
 

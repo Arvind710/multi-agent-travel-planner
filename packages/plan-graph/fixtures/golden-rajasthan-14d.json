@@ -1,0 +1,2328 @@
+{
+  "meta": {
+    "trip_id": "trip-golden-rajasthan",
+    "version": 1,
+    "profile_version": 1,
+    "status": "draft"
+  },
+  "concept": {
+    "node_id": "concept_01JXT21Q0047C4FEZDQK8YZG3C",
+    "title": "Jaipur → Bundi → Udaipur → Jodhpur",
+    "narrative": "Depth over breadth: fewer bases, more time in each.",
+    "region_strategy": "rajasthan",
+    "discarded_alternatives": []
+  },
+  "route": [
+    {
+      "node_id": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "place": {
+        "name": "Jaipur",
+        "region": "rajasthan"
+      },
+      "arrive": "2026-12-05",
+      "depart": "2026-12-09",
+      "nights": 4,
+      "rationale": {
+        "summary": "Jaipur anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "place": {
+        "name": "Bundi",
+        "region": "rajasthan"
+      },
+      "arrive": "2026-12-09",
+      "depart": "2026-12-11",
+      "nights": 2,
+      "rationale": {
+        "summary": "Bundi anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "place": {
+        "name": "Udaipur",
+        "region": "rajasthan"
+      },
+      "arrive": "2026-12-11",
+      "depart": "2026-12-15",
+      "nights": 4,
+      "rationale": {
+        "summary": "Udaipur anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "place": {
+        "name": "Jodhpur",
+        "region": "rajasthan"
+      },
+      "arrive": "2026-12-15",
+      "depart": "2026-12-18",
+      "nights": 3,
+      "rationale": {
+        "summary": "Jodhpur anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    }
+  ],
+  "days": [
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG0W",
+      "date": "2026-12-05",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "theme": "Jaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG0R",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jaipur experience 1",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG0S",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jaipur experience 2",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG0T",
+          "slot": "lunch",
+          "venue": "Jaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG0V",
+          "slot": "dinner",
+          "venue": "Jaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG11",
+      "date": "2026-12-06",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "theme": "Jaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG0X",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jaipur experience 1",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG0Y",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jaipur experience 2",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG0Z",
+          "slot": "lunch",
+          "venue": "Jaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG10",
+          "slot": "dinner",
+          "venue": "Jaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG16",
+      "date": "2026-12-07",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "theme": "Jaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG12",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jaipur experience 1",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG13",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jaipur experience 2",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG14",
+          "slot": "lunch",
+          "venue": "Jaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG15",
+          "slot": "dinner",
+          "venue": "Jaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG1B",
+      "date": "2026-12-08",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "theme": "Jaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG17",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jaipur experience 1",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG18",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jaipur experience 2",
+          "place_ref": {
+            "name": "Jaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG19",
+          "slot": "lunch",
+          "venue": "Jaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1A",
+          "slot": "dinner",
+          "venue": "Jaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG1G",
+      "date": "2026-12-09",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "theme": "Bundi day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1C",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Bundi experience 1",
+          "place_ref": {
+            "name": "Bundi",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1D",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Bundi experience 2",
+          "place_ref": {
+            "name": "Bundi",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1E",
+          "slot": "lunch",
+          "venue": "Bundi lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1F",
+          "slot": "dinner",
+          "venue": "Bundi dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG1N",
+      "date": "2026-12-10",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "theme": "Bundi day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1H",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Bundi experience 1",
+          "place_ref": {
+            "name": "Bundi",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1J",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Bundi experience 2",
+          "place_ref": {
+            "name": "Bundi",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1K",
+          "slot": "lunch",
+          "venue": "Bundi lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1M",
+          "slot": "dinner",
+          "venue": "Bundi dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG1T",
+      "date": "2026-12-11",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "theme": "Udaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1P",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Udaipur experience 1",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1Q",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Udaipur experience 2",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1R",
+          "slot": "lunch",
+          "venue": "Udaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1S",
+          "slot": "dinner",
+          "venue": "Udaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG1Z",
+      "date": "2026-12-12",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "theme": "Udaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1V",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Udaipur experience 1",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG1W",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Udaipur experience 2",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1X",
+          "slot": "lunch",
+          "venue": "Udaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG1Y",
+          "slot": "dinner",
+          "venue": "Udaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG24",
+      "date": "2026-12-13",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "theme": "Udaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG20",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Udaipur experience 1",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG21",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Udaipur experience 2",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG22",
+          "slot": "lunch",
+          "venue": "Udaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG23",
+          "slot": "dinner",
+          "venue": "Udaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG29",
+      "date": "2026-12-14",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "theme": "Udaipur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG25",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Udaipur experience 1",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG26",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Udaipur experience 2",
+          "place_ref": {
+            "name": "Udaipur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG27",
+          "slot": "lunch",
+          "venue": "Udaipur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG28",
+          "slot": "dinner",
+          "venue": "Udaipur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG2E",
+      "date": "2026-12-15",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "theme": "Jodhpur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2A",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jodhpur experience 1",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2B",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jodhpur experience 2",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2C",
+          "slot": "lunch",
+          "venue": "Jodhpur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2D",
+          "slot": "dinner",
+          "venue": "Jodhpur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG2K",
+      "date": "2026-12-16",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "theme": "Jodhpur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2F",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jodhpur experience 1",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2G",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jodhpur experience 2",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2H",
+          "slot": "lunch",
+          "venue": "Jodhpur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2J",
+          "slot": "dinner",
+          "venue": "Jodhpur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG2R",
+      "date": "2026-12-17",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "theme": "Jodhpur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2M",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jodhpur experience 1",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2N",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jodhpur experience 2",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2P",
+          "slot": "lunch",
+          "venue": "Jodhpur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2Q",
+          "slot": "dinner",
+          "venue": "Jodhpur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q0047C4FEZDQK8YZG2X",
+      "date": "2026-12-18",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "theme": "Jodhpur day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2S",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Jodhpur experience 1",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q0047C4FEZDQK8YZG2T",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Jodhpur experience 2",
+          "place_ref": {
+            "name": "Jodhpur",
+            "region": "rajasthan"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2V",
+          "slot": "lunch",
+          "venue": "Jodhpur lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q0047C4FEZDQK8YZG2W",
+          "slot": "dinner",
+          "venue": "Jodhpur dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    }
+  ],
+  "stays": [
+    {
+      "node_id": "stay_01JXT21Q0047C4FEZDQK8YZG2Y",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "primary": {
+        "name": "Jaipur heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 7500,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Jaipur budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Jaipur splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stay_01JXT21Q0047C4FEZDQK8YZG2Z",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "primary": {
+        "name": "Bundi heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 4000,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Bundi budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Bundi splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stay_01JXT21Q0047C4FEZDQK8YZG30",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "primary": {
+        "name": "Udaipur heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 9000,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Udaipur budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Udaipur splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stay_01JXT21Q0047C4FEZDQK8YZG31",
+      "stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "primary": {
+        "name": "Jodhpur heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 6500,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Jodhpur budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Jodhpur splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    }
+  ],
+  "legs": [
+    {
+      "node_id": "leg_01JXT21Q0047C4FEZDQK8YZG32",
+      "from_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0M",
+      "to_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "mode": "train",
+      "operator": "Indian Railways",
+      "service_ref": "12956",
+      "class_options": ["2A", "3A"],
+      "recommended_class": "2A",
+      "depart_date": "2026-12-09",
+      "depart_time": "09:00",
+      "realistic_duration_minutes": 260,
+      "booking": {
+        "channel": "irctc",
+        "opens_at": "2026-10-10",
+        "waitlist_risk": "medium"
+      },
+      "links": [],
+      "fallback_ref": "risk_01JXT21Q0047C4FEZDQK8YZG3E",
+      "cost": {
+        "amount": 3500,
+        "currency": "INR"
+      },
+      "reasoning": {
+        "summary": "Jaipur → Bundi within your daily travel ceiling",
+        "profile_refs": ["constraints.max_daily_travel_hours"],
+        "tradeoffs_considered": []
+      },
+      "tags": [],
+      "sources": [
+        {
+          "kind": "kb",
+          "id": "test-fixture"
+        }
+      ],
+      "verify_flag": false,
+      "locks": "none"
+    },
+    {
+      "node_id": "leg_01JXT21Q0047C4FEZDQK8YZG33",
+      "from_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0N",
+      "to_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "mode": "car",
+      "class_options": [],
+      "depart_date": "2026-12-11",
+      "depart_time": "09:00",
+      "realistic_duration_minutes": 300,
+      "links": [],
+      "fallback_ref": "risk_01JXT21Q0047C4FEZDQK8YZG3F",
+      "cost": {
+        "amount": 3500,
+        "currency": "INR"
+      },
+      "reasoning": {
+        "summary": "Bundi → Udaipur within your daily travel ceiling",
+        "profile_refs": ["constraints.max_daily_travel_hours"],
+        "tradeoffs_considered": []
+      },
+      "tags": [],
+      "sources": [
+        {
+          "kind": "kb",
+          "id": "test-fixture"
+        }
+      ],
+      "verify_flag": false,
+      "locks": "none"
+    },
+    {
+      "node_id": "leg_01JXT21Q0047C4FEZDQK8YZG34",
+      "from_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0P",
+      "to_stop_ref": "stop_01JXT21Q0047C4FEZDQK8YZG0Q",
+      "mode": "train",
+      "operator": "Indian Railways",
+      "service_ref": "12956",
+      "class_options": ["2A", "3A"],
+      "recommended_class": "2A",
+      "depart_date": "2026-12-15",
+      "depart_time": "09:00",
+      "realistic_duration_minutes": 330,
+      "booking": {
+        "channel": "irctc",
+        "opens_at": "2026-10-16",
+        "waitlist_risk": "medium"
+      },
+      "links": [],
+      "fallback_ref": "risk_01JXT21Q0047C4FEZDQK8YZG3G",
+      "cost": {
+        "amount": 3500,
+        "currency": "INR"
+      },
+      "reasoning": {
+        "summary": "Udaipur → Jodhpur within your daily travel ceiling",
+        "profile_refs": ["constraints.max_daily_travel_hours"],
+        "tradeoffs_considered": []
+      },
+      "tags": [],
+      "sources": [
+        {
+          "kind": "kb",
+          "id": "test-fixture"
+        }
+      ],
+      "verify_flag": false,
+      "locks": "none"
+    }
+  ],
+  "budget": {
+    "node_id": "ledger_01JXT21Q0047C4FEZDQK8YZG3D",
+    "line_items": [
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG35",
+        "node_ref": "stay_01JXT21Q0047C4FEZDQK8YZG2Y",
+        "category": "stays",
+        "label": "Jaipur heritage stay × 4 nights",
+        "amount": {
+          "amount": 30000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG36",
+        "node_ref": "stay_01JXT21Q0047C4FEZDQK8YZG2Z",
+        "category": "stays",
+        "label": "Bundi heritage stay × 2 nights",
+        "amount": {
+          "amount": 8000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG37",
+        "node_ref": "stay_01JXT21Q0047C4FEZDQK8YZG30",
+        "category": "stays",
+        "label": "Udaipur heritage stay × 4 nights",
+        "amount": {
+          "amount": 36000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG38",
+        "node_ref": "stay_01JXT21Q0047C4FEZDQK8YZG31",
+        "category": "stays",
+        "label": "Jodhpur heritage stay × 3 nights",
+        "amount": {
+          "amount": 19500,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG39",
+        "node_ref": "leg_01JXT21Q0047C4FEZDQK8YZG32",
+        "category": "transport",
+        "label": "Inter-city leg",
+        "amount": {
+          "amount": 3500,
+          "currency": "INR"
+        },
+        "confidence": "estimate",
+        "date": "2026-12-09"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG3A",
+        "node_ref": "leg_01JXT21Q0047C4FEZDQK8YZG33",
+        "category": "transport",
+        "label": "Inter-city leg",
+        "amount": {
+          "amount": 3500,
+          "currency": "INR"
+        },
+        "confidence": "estimate",
+        "date": "2026-12-11"
+      },
+      {
+        "node_id": "line_item_01JXT21Q0047C4FEZDQK8YZG3B",
+        "node_ref": "leg_01JXT21Q0047C4FEZDQK8YZG34",
+        "category": "transport",
+        "label": "Inter-city leg",
+        "amount": {
+          "amount": 3500,
+          "currency": "INR"
+        },
+        "confidence": "estimate",
+        "date": "2026-12-15"
+      }
+    ],
+    "totals_by_category": {
+      "stays": {
+        "amount": 93500,
+        "currency": "INR"
+      },
+      "transport": {
+        "amount": 10500,
+        "currency": "INR"
+      }
+    },
+    "total": {
+      "amount": 104000,
+      "currency": "INR"
+    },
+    "vs_stated": {
+      "stated": {
+        "amount": 350000,
+        "currency": "INR"
+      }
+    },
+    "tradeoffs": []
+  },
+  "risk": [
+    {
+      "node_id": "risk_01JXT21Q0047C4FEZDQK8YZG3E",
+      "target_ref": "leg_01JXT21Q0047C4FEZDQK8YZG32",
+      "probability": 0.15,
+      "cause": "Seasonal disruption risk on this sector",
+      "plan_b": {
+        "summary": "Fall back to a morning bus via the highway route",
+        "node_refs": []
+      }
+    },
+    {
+      "node_id": "risk_01JXT21Q0047C4FEZDQK8YZG3F",
+      "target_ref": "leg_01JXT21Q0047C4FEZDQK8YZG33",
+      "probability": 0.15,
+      "cause": "Seasonal disruption risk on this sector",
+      "plan_b": {
+        "summary": "Fall back to a morning bus via the highway route",
+        "node_refs": []
+      }
+    },
+    {
+      "node_id": "risk_01JXT21Q0047C4FEZDQK8YZG3G",
+      "target_ref": "leg_01JXT21Q0047C4FEZDQK8YZG34",
+      "probability": 0.15,
+      "cause": "Seasonal disruption risk on this sector",
+      "plan_b": {
+        "summary": "Fall back to a morning bus via the highway route",
+        "node_refs": []
+      }
+    }
+  ],
+  "pretrip": [
+    {
+      "node_id": "pretrip_01JXT21Q0047C4FEZDQK8YZG3H",
+      "due": "2026-10-06",
+      "offset_days": -60,
+      "label": "Book trains (IRCTC window opens)",
+      "kind": "booking",
+      "tags": [],
+      "refs": [],
+      "links": []
+    }
+  ],
+  "packing": {
+    "node_id": "packing_01JXT21Q0047C4FEZDQK8YZG3J",
+    "items": [
+      {
+        "label": "Modest-dress layers for religious sites",
+        "tags": ["dress-code"]
+      }
+    ]
+  }
+}

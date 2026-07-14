@@ -1,0 +1,1305 @@
+{
+  "meta": {
+    "trip_id": "trip-golden-kerala",
+    "version": 1,
+    "profile_version": 1,
+    "status": "draft"
+  },
+  "concept": {
+    "node_id": "concept_01JXT21Q004JTD6S3SBFMWH9C7",
+    "title": "Fort Kochi → Munnar → Alleppey",
+    "narrative": "Depth over breadth: fewer bases, more time in each.",
+    "region_strategy": "kerala",
+    "discarded_alternatives": []
+  },
+  "route": [
+    {
+      "node_id": "stop_01JXT21Q004JTD6S3SBFMWH9AQ",
+      "place": {
+        "name": "Fort Kochi",
+        "region": "kerala"
+      },
+      "arrive": "2027-01-10",
+      "depart": "2027-01-12",
+      "nights": 2,
+      "rationale": {
+        "summary": "Fort Kochi anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "place": {
+        "name": "Munnar",
+        "region": "kerala"
+      },
+      "arrive": "2027-01-12",
+      "depart": "2027-01-14",
+      "nights": 2,
+      "rationale": {
+        "summary": "Munnar anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "place": {
+        "name": "Alleppey",
+        "region": "kerala"
+      },
+      "arrive": "2027-01-14",
+      "depart": "2027-01-16",
+      "nights": 2,
+      "rationale": {
+        "summary": "Alleppey anchors this leg of the route",
+        "profile_refs": [],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    }
+  ],
+  "days": [
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9AY",
+      "date": "2027-01-10",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AQ",
+      "theme": "Fort Kochi day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9AT",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Fort Kochi experience 1",
+          "place_ref": {
+            "name": "Fort Kochi",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9AV",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Fort Kochi experience 2",
+          "place_ref": {
+            "name": "Fort Kochi",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9AW",
+          "slot": "lunch",
+          "venue": "Fort Kochi lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9AX",
+          "slot": "dinner",
+          "venue": "Fort Kochi dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9B3",
+      "date": "2027-01-11",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AQ",
+      "theme": "Fort Kochi day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9AZ",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Fort Kochi experience 1",
+          "place_ref": {
+            "name": "Fort Kochi",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9B0",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Fort Kochi experience 2",
+          "place_ref": {
+            "name": "Fort Kochi",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9B1",
+          "slot": "lunch",
+          "venue": "Fort Kochi lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9B2",
+          "slot": "dinner",
+          "venue": "Fort Kochi dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9B8",
+      "date": "2027-01-12",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "theme": "Munnar day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9B4",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Munnar experience 1",
+          "place_ref": {
+            "name": "Munnar",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9B5",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Munnar experience 2",
+          "place_ref": {
+            "name": "Munnar",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9B6",
+          "slot": "lunch",
+          "venue": "Munnar lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9B7",
+          "slot": "dinner",
+          "venue": "Munnar dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9BD",
+      "date": "2027-01-13",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "theme": "Munnar day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9B9",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Munnar experience 1",
+          "place_ref": {
+            "name": "Munnar",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BA",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Munnar experience 2",
+          "place_ref": {
+            "name": "Munnar",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BB",
+          "slot": "lunch",
+          "venue": "Munnar lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BC",
+          "slot": "dinner",
+          "venue": "Munnar dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9BJ",
+      "date": "2027-01-14",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "theme": "Alleppey day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BE",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Alleppey experience 1",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BF",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Alleppey experience 2",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BG",
+          "slot": "lunch",
+          "venue": "Alleppey lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BH",
+          "slot": "dinner",
+          "venue": "Alleppey dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9BQ",
+      "date": "2027-01-15",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "theme": "Alleppey day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BK",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Alleppey experience 1",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BM",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Alleppey experience 2",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BN",
+          "slot": "lunch",
+          "venue": "Alleppey lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BP",
+          "slot": "dinner",
+          "venue": "Alleppey dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    },
+    {
+      "node_id": "day_01JXT21Q004JTD6S3SBFMWH9BW",
+      "date": "2027-01-16",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "theme": "Alleppey day",
+      "energy_rating": "moderate",
+      "blocks": [
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BR",
+          "kind": "experience",
+          "time_window": {
+            "start": "09:30",
+            "end": "11:30"
+          },
+          "title": "Alleppey experience 1",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        },
+        {
+          "node_id": "block_01JXT21Q004JTD6S3SBFMWH9BS",
+          "kind": "experience",
+          "time_window": {
+            "start": "15:00",
+            "end": "17:00"
+          },
+          "title": "Alleppey experience 2",
+          "place_ref": {
+            "name": "Alleppey",
+            "region": "kerala"
+          },
+          "duration_minutes": 120,
+          "cost": {
+            "amount": 700,
+            "currency": "INR"
+          },
+          "reasoning": {
+            "summary": "You rated architecture 4/5",
+            "profile_refs": [],
+            "tradeoffs_considered": []
+          },
+          "links": [],
+          "tags": [],
+          "tradeoff_flagged": false,
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "alternatives": [],
+          "locks": "none"
+        }
+      ],
+      "meals": [
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BT",
+          "slot": "lunch",
+          "venue": "Alleppey lunch spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 500,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        },
+        {
+          "node_id": "meal_01JXT21Q004JTD6S3SBFMWH9BV",
+          "slot": "dinner",
+          "venue": "Alleppey dinner spot",
+          "dishes": ["dal baati churma"],
+          "diet_flags": ["veg"],
+          "cost": {
+            "amount": 800,
+            "currency": "INR"
+          },
+          "links": [],
+          "tags": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false,
+          "locks": "none"
+        }
+      ],
+      "locks": "none"
+    }
+  ],
+  "stays": [
+    {
+      "node_id": "stay_01JXT21Q004JTD6S3SBFMWH9BX",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AQ",
+      "primary": {
+        "name": "Fort Kochi heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 5500,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Fort Kochi budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Fort Kochi splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stay_01JXT21Q004JTD6S3SBFMWH9BY",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "primary": {
+        "name": "Munnar heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 6000,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Munnar budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Munnar splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    },
+    {
+      "node_id": "stay_01JXT21Q004JTD6S3SBFMWH9BZ",
+      "stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "primary": {
+        "name": "Alleppey heritage stay",
+        "style_tags": ["heritage"],
+        "price_per_night": {
+          "amount": 8000,
+          "currency": "INR"
+        },
+        "links": [],
+        "sources": [
+          {
+            "kind": "kb",
+            "id": "test-fixture"
+          }
+        ],
+        "verify_flag": false
+      },
+      "alternates": [
+        {
+          "name": "Alleppey budget stay",
+          "style_tags": ["homestay"],
+          "price_per_night": {
+            "amount": 2500,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        },
+        {
+          "name": "Alleppey splurge stay",
+          "style_tags": ["luxury"],
+          "price_per_night": {
+            "amount": 18000,
+            "currency": "INR"
+          },
+          "links": [],
+          "sources": [
+            {
+              "kind": "kb",
+              "id": "test-fixture"
+            }
+          ],
+          "verify_flag": false
+        }
+      ],
+      "reasoning": {
+        "summary": "Matches your heritage stay preference",
+        "profile_refs": ["taste.stay_styles"],
+        "tradeoffs_considered": []
+      },
+      "locks": "none"
+    }
+  ],
+  "legs": [
+    {
+      "node_id": "leg_01JXT21Q004JTD6S3SBFMWH9C0",
+      "from_stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AQ",
+      "to_stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "mode": "car",
+      "class_options": [],
+      "depart_date": "2027-01-12",
+      "depart_time": "09:00",
+      "realistic_duration_minutes": 270,
+      "links": [],
+      "fallback_ref": "risk_01JXT21Q004JTD6S3SBFMWH9C9",
+      "cost": {
+        "amount": 3500,
+        "currency": "INR"
+      },
+      "reasoning": {
+        "summary": "Fort Kochi → Munnar within your daily travel ceiling",
+        "profile_refs": ["constraints.max_daily_travel_hours"],
+        "tradeoffs_considered": []
+      },
+      "tags": [],
+      "sources": [
+        {
+          "kind": "kb",
+          "id": "test-fixture"
+        }
+      ],
+      "verify_flag": false,
+      "locks": "none"
+    },
+    {
+      "node_id": "leg_01JXT21Q004JTD6S3SBFMWH9C1",
+      "from_stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AR",
+      "to_stop_ref": "stop_01JXT21Q004JTD6S3SBFMWH9AS",
+      "mode": "car",
+      "class_options": [],
+      "depart_date": "2027-01-14",
+      "depart_time": "09:00",
+      "realistic_duration_minutes": 320,
+      "links": [],
+      "fallback_ref": "risk_01JXT21Q004JTD6S3SBFMWH9CA",
+      "cost": {
+        "amount": 3500,
+        "currency": "INR"
+      },
+      "reasoning": {
+        "summary": "Munnar → Alleppey within your daily travel ceiling",
+        "profile_refs": ["constraints.max_daily_travel_hours"],
+        "tradeoffs_considered": []
+      },
+      "tags": [],
+      "sources": [
+        {
+          "kind": "kb",
+          "id": "test-fixture"
+        }
+      ],
+      "verify_flag": false,
+      "locks": "none"
+    }
+  ],
+  "budget": {
+    "node_id": "ledger_01JXT21Q004JTD6S3SBFMWH9C8",
+    "line_items": [
+      {
+        "node_id": "line_item_01JXT21Q004JTD6S3SBFMWH9C2",
+        "node_ref": "stay_01JXT21Q004JTD6S3SBFMWH9BX",
+        "category": "stays",
+        "label": "Fort Kochi heritage stay × 2 nights",
+        "amount": {
+          "amount": 11000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q004JTD6S3SBFMWH9C3",
+        "node_ref": "stay_01JXT21Q004JTD6S3SBFMWH9BY",
+        "category": "stays",
+        "label": "Munnar heritage stay × 2 nights",
+        "amount": {
+          "amount": 12000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q004JTD6S3SBFMWH9C4",
+        "node_ref": "stay_01JXT21Q004JTD6S3SBFMWH9BZ",
+        "category": "stays",
+        "label": "Alleppey heritage stay × 2 nights",
+        "amount": {
+          "amount": 16000,
+          "currency": "INR"
+        },
+        "confidence": "estimate"
+      },
+      {
+        "node_id": "line_item_01JXT21Q004JTD6S3SBFMWH9C5",
+        "node_ref": "leg_01JXT21Q004JTD6S3SBFMWH9C0",
+        "category": "transport",
+        "label": "Inter-city leg",
+        "amount": {
+          "amount": 3500,
+          "currency": "INR"
+        },
+        "confidence": "estimate",
+        "date": "2027-01-12"
+      },
+      {
+        "node_id": "line_item_01JXT21Q004JTD6S3SBFMWH9C6",
+        "node_ref": "leg_01JXT21Q004JTD6S3SBFMWH9C1",
+        "category": "transport",
+        "label": "Inter-city leg",
+        "amount": {
+          "amount": 3500,
+          "currency": "INR"
+        },
+        "confidence": "estimate",
+        "date": "2027-01-14"
+      }
+    ],
+    "totals_by_category": {
+      "stays": {
+        "amount": 39000,
+        "currency": "INR"
+      },
+      "transport": {
+        "amount": 7000,
+        "currency": "INR"
+      }
+    },
+    "total": {
+      "amount": 46000,
+      "currency": "INR"
+    },
+    "vs_stated": {
+      "stated": {
+        "amount": 90000,
+        "currency": "INR"
+      }
+    },
+    "tradeoffs": []
+  },
+  "risk": [
+    {
+      "node_id": "risk_01JXT21Q004JTD6S3SBFMWH9C9",
+      "target_ref": "leg_01JXT21Q004JTD6S3SBFMWH9C0",
+      "probability": 0.15,
+      "cause": "Seasonal disruption risk on this sector",
+      "plan_b": {
+        "summary": "Fall back to a morning bus via the highway route",
+        "node_refs": []
+      }
+    },
+    {
+      "node_id": "risk_01JXT21Q004JTD6S3SBFMWH9CA",
+      "target_ref": "leg_01JXT21Q004JTD6S3SBFMWH9C1",
+      "probability": 0.15,
+      "cause": "Seasonal disruption risk on this sector",
+      "plan_b": {
+        "summary": "Fall back to a morning bus via the highway route",
+        "node_refs": []
+      }
+    }
+  ],
+  "pretrip": [
+    {
+      "node_id": "pretrip_01JXT21Q004JTD6S3SBFMWH9CB",
+      "due": "2026-11-11",
+      "offset_days": -60,
+      "label": "Book trains (IRCTC window opens)",
+      "kind": "booking",
+      "tags": [],
+      "refs": [],
+      "links": []
+    }
+  ],
+  "packing": {
+    "node_id": "packing_01JXT21Q004JTD6S3SBFMWH9CC",
+    "items": [
+      {
+        "label": "Modest-dress layers for religious sites",
+        "tags": ["dress-code"]
+      }
+    ]
+  }
+}

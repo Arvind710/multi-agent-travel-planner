@@ -26,6 +26,9 @@ jobs:
       - run: pnpm boundaries
       # ubuntu runners have Docker → the testcontainers db integration test runs here
       - run: pnpm exec turbo run typecheck test
+        env:
+          # property-test depth (implementation-plan P1.5): 1k on PR/push CI
+          FC_NUM_RUNS: 1000
 
   migrations:
     name: migration gate (fresh DB apply + seed)
