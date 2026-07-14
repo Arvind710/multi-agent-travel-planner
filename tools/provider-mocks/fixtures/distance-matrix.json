@@ -1,0 +1,13 @@
+{
+  "delhi|jaipur|drive": { "distance_km": 281, "duration_hours": 5.5, "route_note": "NH48 expressway" },
+  "delhi|agra|drive": { "distance_km": 233, "duration_hours": 3.5, "route_note": "Yamuna Expressway" },
+  "jaipur|jodhpur|drive": { "distance_km": 337, "duration_hours": 6.0, "route_note": "NH25" },
+  "jaipur|udaipur|drive": { "distance_km": 393, "duration_hours": 7.0, "route_note": "NH48/NH58" },
+  "jodhpur|jaisalmer|drive": { "distance_km": 277, "duration_hours": 5.0, "route_note": "NH125 desert road" },
+  "jodhpur|udaipur|drive": { "distance_km": 250, "duration_hours": 5.0, "route_note": "NH162, Ranakpur detour possible" },
+  "kochi|munnar|drive": { "distance_km": 130, "duration_hours": 4.0, "route_note": "hill road, slow after Neriamangalam" },
+  "munnar|thekkady|drive": { "distance_km": 93, "duration_hours": 3.5, "route_note": "hill road" },
+  "thekkady|alleppey|drive": { "distance_km": 140, "duration_hours": 4.0, "route_note": "descent + backwater plains" },
+  "alleppey|kochi|drive": { "distance_km": 53, "duration_hours": 1.5, "route_note": "NH66" },
+  "delhi|leh|drive": { "distance_km": 1011, "duration_hours": 28.0, "route_note": "2-day route via Manali, seasonal" }
+}

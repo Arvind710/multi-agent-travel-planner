@@ -1,0 +1,19 @@
+{
+  "rajasthan": {
+    "1": { "high_c": 22, "low_c": 8, "rain_mm": 5, "note": "cool, clear — peak season" },
+    "5": { "high_c": 41, "low_c": 27, "rain_mm": 15, "note": "extreme heat" },
+    "8": { "high_c": 33, "low_c": 25, "rain_mm": 90, "note": "monsoon, moderate" },
+    "12": { "high_c": 24, "low_c": 9, "rain_mm": 4, "note": "cool days, cold desert nights" }
+  },
+  "kerala": {
+    "1": { "high_c": 32, "low_c": 23, "rain_mm": 20, "note": "dry, pleasant — peak season" },
+    "6": { "high_c": 30, "low_c": 24, "rain_mm": 650, "note": "SW monsoon peak" },
+    "11": { "high_c": 31, "low_c": 24, "rain_mm": 160, "note": "NE monsoon showers" },
+    "12": { "high_c": 32, "low_c": 23, "rain_mm": 40, "note": "drying out, humid" }
+  },
+  "ladakh": {
+    "1": { "high_c": -2, "low_c": -15, "rain_mm": 8, "note": "deep winter, roads closed" },
+    "7": { "high_c": 25, "low_c": 10, "rain_mm": 15, "note": "open season" },
+    "12": { "high_c": 2, "low_c": -12, "rain_mm": 5, "note": "roads closed, flights only" }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "delhi|jaipur": [
+    {
+      "train_no": "12015",
+      "name": "Ajmer Shatabdi",
+      "departs": "06:10",
+      "arrives": "10:30",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "classes": ["CC", "EC"],
+      "duration_hours": 4.3
+    },
+    {
+      "train_no": "12958",
+      "name": "Swarna Jayanti Rajdhani",
+      "departs": "19:55",
+      "arrives": "00:15",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "classes": ["1A", "2A", "3A"],
+      "duration_hours": 4.3
+    }
+  ],
+  "jaipur|udaipur": [
+    {
+      "train_no": "12965",
+      "name": "Gwalior Udaipur Express",
+      "departs": "22:30",
+      "arrives": "06:00",
+      "days": ["mon", "wed", "fri"],
+      "classes": ["1A", "2A", "3A", "SL"],
+      "duration_hours": 7.5
+    }
+  ],
+  "delhi|kochi": [
+    {
+      "train_no": "12626",
+      "name": "Kerala Express",
+      "departs": "20:10",
+      "arrives": "13:45+2",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "classes": ["1A", "2A", "3A", "SL"],
+      "duration_hours": 41.5
+    }
+  ]
+}

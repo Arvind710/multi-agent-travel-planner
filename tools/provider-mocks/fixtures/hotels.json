@@ -1,0 +1,58 @@
+{
+  "jaipur": [
+    {
+      "id": "htl_jaipur_haveli_01",
+      "name": "Heritage Haveli, Old City",
+      "styles": ["heritage", "boutique"],
+      "price_band_inr": [6500, 9500],
+      "neighbourhood": "near Hawa Mahal",
+      "walkability_note": "8 min walk to the old-city gate",
+      "stairs": true,
+      "rating": 4.6
+    },
+    {
+      "id": "htl_jaipur_biz_02",
+      "name": "Business Comfort Jaipur",
+      "styles": ["business"],
+      "price_band_inr": [4200, 5800],
+      "neighbourhood": "MI Road",
+      "walkability_note": "taxi to sights",
+      "stairs": false,
+      "rating": 4.2
+    },
+    {
+      "id": "htl_jaipur_palace_03",
+      "name": "Rajmahal Palace Stay",
+      "styles": ["heritage", "luxury"],
+      "price_band_inr": [22000, 38000],
+      "neighbourhood": "Civil Lines",
+      "walkability_note": "gardens on-site, drive to old city",
+      "stairs": true,
+      "rating": 4.8
+    }
+  ],
+  "udaipur": [
+    {
+      "id": "htl_udaipur_lake_01",
+      "name": "Lake-Facing Haveli",
+      "styles": ["heritage", "boutique"],
+      "price_band_inr": [8500, 14000],
+      "neighbourhood": "Lal Ghat",
+      "walkability_note": "ghats at the doorstep",
+      "stairs": true,
+      "rating": 4.7
+    }
+  ],
+  "kochi": [
+    {
+      "id": "htl_kochi_fort_01",
+      "name": "Fort Kochi Dutch House",
+      "styles": ["heritage", "homestay"],
+      "price_band_inr": [5500, 8000],
+      "neighbourhood": "Fort Kochi",
+      "walkability_note": "5 min to Chinese fishing nets",
+      "stairs": false,
+      "rating": 4.5
+    }
+  ]
+}
