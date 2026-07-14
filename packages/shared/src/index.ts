@@ -6,6 +6,7 @@
 export * from "./env";
 export * from "./dates";
 export * from "./money";
+export * from "./profile";
 export * from "./result";
 export * from "./events";
 export * from "./flags";

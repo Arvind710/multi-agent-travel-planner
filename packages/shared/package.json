@@ -8,6 +8,7 @@
     "./env": "./src/env.ts",
     "./dates": "./src/dates.ts",
     "./money": "./src/money.ts",
+    "./profile": "./src/profile.ts",
     "./result": "./src/result.ts",
     "./events": "./src/events.ts",
     "./flags": "./src/flags.ts",
