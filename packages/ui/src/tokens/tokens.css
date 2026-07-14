@@ -22,6 +22,7 @@
   --color-surface-sunken: #f3efe9;
   --color-ink: var(--pigment-ink);
   --color-ink-muted: #6b6259;
+  /* ink-faint fails AA for body text on paper — decorative/≥24px use ONLY */
   --color-ink-faint: #999086;
   --color-accent: var(--pigment-madder);
   --color-accent-strong: var(--pigment-madder-deep);

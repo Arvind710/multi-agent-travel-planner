@@ -8,7 +8,7 @@ export default function Landing() {
         {t("title")}
       </h1>
       <p className="text-[length:var(--text-lg)] text-ink-muted">{t("tagline")}</p>
-      <p className="text-[length:var(--text-sm)] text-ink-faint">{t("stub")}</p>
+      <p className="text-[length:var(--text-sm)] text-ink-muted">{t("stub")}</p>
     </main>
   );
 }
