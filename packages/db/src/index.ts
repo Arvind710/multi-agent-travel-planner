@@ -6,3 +6,12 @@ export * from "./schema";
 export { createDb, pingDb, type Db } from "./client";
 export { runMigrations } from "./migrate";
 export { getTripRole, roleAtLeast, type TripRole } from "./repos/trips";
+export {
+  savePlanGraphVersion,
+  loadPlanGraph,
+  loadPlanGraphDiff,
+  listPlanGraphVersions,
+  rollbackPlanGraph,
+  PlanGraphValidationError,
+  type PlanGraphVersionInfo,
+} from "./repos/planGraphs";

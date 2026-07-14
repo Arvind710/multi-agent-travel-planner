@@ -278,6 +278,9 @@ importers:
 
   packages/db:
     dependencies:
+      '@raah/plan-graph':
+        specifier: workspace:*
+        version: link:../plan-graph
       '@raah/shared':
         specifier: workspace:*
         version: link:../shared
