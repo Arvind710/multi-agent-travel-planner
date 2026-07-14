@@ -1,0 +1,65 @@
+name: raah-dev
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: raah
+      POSTGRES_PASSWORD: raah
+      POSTGRES_DB: raah
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U raah -d raah"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: raah
+      MINIO_ROOT_PASSWORD: raah-dev-secret
+    volumes:
+      - miniodata:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Provider mocks normally run via `turbo dev` (tools/provider-mocks).
+  # This containerised variant exists for CI / fully-dockerised setups:
+  #   docker compose -f docker-compose.dev.yml --profile mocks up
+  provider-mocks:
+    profiles: ["mocks"]
+    image: node:22-alpine
+    working_dir: /repo
+    command: sh -c "corepack enable pnpm && pnpm install --frozen-lockfile && pnpm --filter @raah/provider-mocks start"
+    ports:
+      - "4010:4010"
+    volumes:
+      - ./:/repo
+
+volumes:
+  pgdata:
+  redisdata:
+  miniodata:
