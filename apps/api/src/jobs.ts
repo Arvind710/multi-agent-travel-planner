@@ -2,6 +2,7 @@ import { Queue } from "bullmq";
 import { Redis } from "ioredis";
 import { ulid } from "ulid";
 import { loadEnv } from "@raah/shared/env";
+import { injectTraceContext } from "@raah/shared/telemetry";
 
 const env = loadEnv();
 
@@ -23,6 +24,6 @@ function queue(name: string): Queue {
 /** Enqueue a plan.generate job; returns the job id the SSE channel is keyed by. */
 export async function enqueuePlanGenerate(payload: Record<string, unknown>): Promise<string> {
   const jobId = ulid();
-  await queue("plan.generate").add("generate", payload, { jobId });
+  await queue("plan.generate").add("generate", injectTraceContext(payload), { jobId });
   return jobId;
 }

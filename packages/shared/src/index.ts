@@ -9,3 +9,4 @@ export * from "./money";
 export * from "./result";
 export * from "./events";
 export * from "./flags";
+export * from "./telemetry";

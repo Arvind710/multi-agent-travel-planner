@@ -1,10 +1,20 @@
+import { initOtel } from "./otel";
+import { initSentry } from "./sentry";
+
+initOtel("raah-worker");
+initSentry();
+
 import { setTimeout as sleep } from "node:timers/promises";
+import { context as otelContext, trace } from "@opentelemetry/api";
 import { Worker, type Processor } from "bullmq";
 import { Redis } from "ioredis";
 import { loadEnv } from "@raah/shared/env";
 import { publishJobEvent } from "@raah/shared/events";
+import { extractTraceContext } from "@raah/shared/telemetry";
 import { logger } from "./logger";
 import { QUEUE, queueConcurrency, type QueueName } from "./queues";
+
+const tracer = trace.getTracer("raah-worker");
 
 const env = loadEnv();
 
@@ -23,16 +33,26 @@ events.on("error", (e) => logger.warn({ err: e.message }, "redis (events) error"
  */
 const planGenerateProcessor: Processor = async (job) => {
   const jobId = String(job.id);
-  logger.info({ jobId }, "plan.generate heartbeat job started");
-  for (let i = 1; i <= 8; i++) {
-    await publishJobEvent(events, jobId, {
-      type: "job.heartbeat",
-      message: `heartbeat ${i}/8 — pipeline plumbing OK`,
-    });
-    await sleep(1000);
-  }
-  await publishJobEvent(events, jobId, { type: "job.completed" });
-  logger.info({ jobId }, "plan.generate heartbeat job completed");
+  // Continue the trace started at enqueue time (ARCH §14.1: one trace per plan job).
+  const parent = extractTraceContext(job.data as Record<string, unknown>);
+  await otelContext.with(parent, () =>
+    tracer.startActiveSpan("plan.generate", async (span) => {
+      try {
+        logger.info({ jobId }, "plan.generate heartbeat job started");
+        for (let i = 1; i <= 8; i++) {
+          await publishJobEvent(events, jobId, {
+            type: "job.heartbeat",
+            message: `heartbeat ${i}/8 — pipeline plumbing OK`,
+          });
+          await sleep(1000);
+        }
+        await publishJobEvent(events, jobId, { type: "job.completed" });
+        logger.info({ jobId }, "plan.generate heartbeat job completed");
+      } finally {
+        span.end();
+      }
+    }),
+  );
 };
 
 const noopProcessor =

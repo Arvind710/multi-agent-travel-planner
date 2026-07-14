@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/sdk-node": "^0.220.0",
+    "@opentelemetry/sdk-trace-node": "^2.9.0",
     "@raah/db": "workspace:*",
     "@raah/shared": "workspace:*",
+    "@sentry/node": "^10.65.0",
     "bullmq": "^5.80.2",
     "ioredis": "^5.11.1",
     "pino": "^10.3.1",

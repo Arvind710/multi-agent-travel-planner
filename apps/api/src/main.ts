@@ -1,3 +1,9 @@
+import { initOtel } from "./otel";
+import { initSentry } from "./sentry";
+
+initOtel("raah-api");
+initSentry();
+
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import { fastifyTRPCPlugin } from "@trpc/server/adapters/fastify";

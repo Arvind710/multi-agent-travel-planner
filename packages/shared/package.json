@@ -10,13 +10,15 @@
     "./money": "./src/money.ts",
     "./result": "./src/result.ts",
     "./events": "./src/events.ts",
-    "./flags": "./src/flags.ts"
+    "./flags": "./src/flags.ts",
+    "./telemetry": "./src/telemetry.ts"
   },
   "scripts": {
     "typecheck": "tsc",
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
     "luxon": "^3.7.2",
     "zod": "^4.4.3"
   },
