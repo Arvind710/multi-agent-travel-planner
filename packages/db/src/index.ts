@@ -3,5 +3,5 @@
  * DETERMINISTIC PACKAGE: zero LLM calls (CI-enforced).
  */
 export * from "./schema.js";
-export { createDb, type Db } from "./client.js";
+export { createDb, pingDb, type Db } from "./client.js";
 export { runMigrations } from "./migrate.js";
