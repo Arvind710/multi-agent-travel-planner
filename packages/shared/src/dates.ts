@@ -60,6 +60,11 @@ export function monthOf(iso: ISODate): number {
   return toIST(iso).month;
 }
 
+/** ISO weekday (1=Mon … 7=Sun) of an ISO date — monument closure rules. */
+export function weekdayOf(iso: ISODate): number {
+  return toIST(iso).weekday;
+}
+
 /** Human format in IST, e.g. "Sat, 5 Dec 2026". */
 export function formatISTDate(iso: ISODate, locale = "en-IN"): string {
   return toIST(iso).setLocale(locale).toFormat("ccc, d LLL yyyy");

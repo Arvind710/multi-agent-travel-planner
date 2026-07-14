@@ -41,7 +41,9 @@ export function buildGoldenRajasthan14d(): PlanGraph {
         stayPricePerNight: 6500,
       },
     ],
-    statedBudget: 350000,
+    // Within ±10% of the builder's ledger total (₹104,000) — golden graphs
+    // must pass the budget-bounds constraint rule.
+    statedBudget: 110000,
   });
 }
 
@@ -70,6 +72,7 @@ export function buildGoldenKerala7d(): PlanGraph {
         stayPricePerNight: 8000,
       },
     ],
-    statedBudget: 90000,
+    // Within ±10% of the builder's ledger total (₹46,000).
+    statedBudget: 48000,
   });
 }
