@@ -1,0 +1,22 @@
+# deps / builds
+node_modules/
+.next/
+dist/
+.turbo/
+coverage/
+*.tsbuildinfo
+.ladle/
+
+# env & secrets — never commit
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# logs
+*.log

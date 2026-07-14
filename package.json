@@ -1,0 +1,32 @@
+{
+  "name": "raah",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "boundaries": "depcruise apps packages tools --config .dependency-cruiser.cjs",
+    "db:generate": "pnpm --filter @raah/db generate",
+    "db:migrate": "pnpm --filter @raah/db migrate",
+    "db:seed": "pnpm --filter @raah/db seed"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "dependency-cruiser": "^18.1.0",
+    "eslint": "^9.39.5",
+    "globals": "^16.0.0",
+    "prettier": "^3.9.5",
+    "turbo": "^2.10.5",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.64.0"
+  }
+}
