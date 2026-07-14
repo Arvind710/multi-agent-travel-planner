@@ -10,6 +10,7 @@ export default tseslint.config(
       "**/.turbo/**",
       "**/coverage/**",
       "**/.ladle/**",
+      "**/build/**",
       "Docs/**",
       "packages/db/drizzle/**",
       "next-env.d.ts",

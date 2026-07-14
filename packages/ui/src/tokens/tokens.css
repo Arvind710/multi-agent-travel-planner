@@ -1,0 +1,109 @@
+/**
+ * Raah design tokens (ARCH §4.1) — the single source of visual truth.
+ * Semantic tokens only in components; raw pigments live here.
+ * Dark mode is a first-class token theme via [data-theme="dark"].
+ */
+:root {
+  /* ── pigments (raw — never used directly in components) ── */
+  --pigment-paper: #faf8f5;
+  --pigment-ink: #1a1714;
+  --pigment-madder: #b3432b; /* primary accent — madder red */
+  --pigment-madder-deep: #93331f;
+  --pigment-indigo: #2c3e66; /* secondary — reasoning voice */
+  --pigment-indigo-deep: #22304f;
+  --pigment-turmeric: #d99a2b; /* support — assumptions, warnings */
+  --pigment-peepal: #4a7c59; /* support — success, "verified" */
+  --pigment-paper-dark: #171412;
+  --pigment-ink-dark: #ece7e1;
+
+  /* ── semantic: color ── */
+  --color-surface: var(--pigment-paper);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #f3efe9;
+  --color-ink: var(--pigment-ink);
+  --color-ink-muted: #6b6259;
+  --color-ink-faint: #999086;
+  --color-accent: var(--pigment-madder);
+  --color-accent-strong: var(--pigment-madder-deep);
+  --color-secondary: var(--pigment-indigo);
+  --color-warning: var(--pigment-turmeric);
+  --color-success: var(--pigment-peepal);
+  --color-danger: #a63a2e;
+  --color-border: #e5ded4;
+  --color-border-strong: #cfc6b8;
+  --color-focus-ring: #2c3e66;
+
+  /* ── type ── */
+  --font-display: "Fraunces", "Noto Serif Devanagari", Georgia, serif;
+  --font-body:
+    "Inter", "Noto Sans", "Noto Sans Devanagari", -apple-system, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans Devanagari", ui-monospace, monospace;
+
+  /* 1.25 modular scale; document body 17px (ARCH §4.1) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-ui: 0.9375rem; /* 15px UI default */
+  --text-doc: 1.0625rem; /* 17px trip-document body */
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+  --leading-doc: 1.65;
+  --leading-ui: 1.5;
+  --measure-doc: 68ch;
+
+  /* ── spacing: 4px base grid, document rhythm on 8pt ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── elevation: flat + hairline by default; shadow only overlays/map ── */
+  --border-hairline: 1px solid var(--color-border);
+  --shadow-overlay: 0 8px 32px rgb(26 23 20 / 0.16);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ── motion: Linear-school restraint (ARCH §4.4) ── */
+  --motion-fast: 150ms;
+  --motion-base: 200ms;
+  --motion-slow: 250ms;
+  --motion-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --motion-rise: 12px; /* the single content-entry fade-rise distance */
+}
+
+[data-theme="dark"] {
+  --color-surface: var(--pigment-paper-dark);
+  --color-surface-raised: #211d1a;
+  --color-surface-sunken: #121009;
+  --color-ink: var(--pigment-ink-dark);
+  --color-ink-muted: #a89e93;
+  --color-ink-faint: #7d746a;
+  --color-accent: #d2604a; /* madder lifted for dark contrast */
+  --color-accent-strong: #e07b62;
+  --color-secondary: #8fa4d4;
+  --color-warning: #e0ad4e;
+  --color-success: #6f9f80;
+  --color-danger: #d0604f;
+  --color-border: #38322c;
+  --color-border-strong: #4c453d;
+  --color-focus-ring: #8fa4d4;
+  --shadow-overlay: 0 8px 32px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+    --motion-rise: 0px;
+  }
+}
