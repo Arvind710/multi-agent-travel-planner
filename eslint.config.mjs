@@ -1,0 +1,64 @@
+import tseslint from "typescript-eslint";
+import globals from "globals";
+
+export default tseslint.config(
+  {
+    ignores: [
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/dist/**",
+      "**/.turbo/**",
+      "**/coverage/**",
+      "**/.ladle/**",
+      "Docs/**",
+      "packages/db/drizzle/**",
+      "next-env.d.ts",
+    ],
+  },
+  ...tseslint.configs.strict,
+  {
+    languageOptions: {
+      globals: { ...globals.node, ...globals.browser },
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+    },
+  },
+  {
+    // ARCH rule: external HTTP only through packages/integrations adapters.
+    // dependency-cruiser catches http-client *imports*; this catches raw global fetch.
+    files: ["packages/**/*.ts", "apps/api/**/*.ts", "apps/worker/**/*.ts"],
+    ignores: ["packages/integrations/**"],
+    rules: {
+      "no-restricted-globals": [
+        "error",
+        {
+          name: "fetch",
+          message:
+            "External HTTP goes through @raah/integrations adapters only (no-fetch-outside-integrations).",
+        },
+      ],
+    },
+  },
+  {
+    // ARCH rule: all date math via packages/shared/dates (Luxon, IST-aware).
+    files: ["packages/**/*.ts", "apps/**/*.ts"],
+    ignores: ["packages/shared/**"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          paths: [
+            {
+              name: "luxon",
+              message: "Use @raah/shared/dates (IST-aware helpers) instead of raw Luxon.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+);
