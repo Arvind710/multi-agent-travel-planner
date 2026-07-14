@@ -1,6 +1,11 @@
 import { decode } from "@auth/core/jwt";
 import { loadEnv } from "@raah/shared/env";
-import type { Session } from "./context";
+
+export interface Session {
+  userId: string | null;
+  /** Anonymous visitors get a stable id for the 1-free-plan allowance (ARCH §11). */
+  anonymousId: string | null;
+}
 
 const env = loadEnv();
 

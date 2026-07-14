@@ -37,7 +37,7 @@ module.exports = {
     doNotFollow: { path: "node_modules" },
     tsPreCompilationDeps: true,
     tsConfig: { fileName: "tsconfig.base.json" },
-    exclude: { path: "\\.(test|spec)\\.tsx?$" },
+    exclude: { path: "(\\.(test|spec)\\.tsx?$|/build/|/dist/|/\\.next/)" },
     reporterOptions: { text: { highlightFocused: true } },
   },
 };
