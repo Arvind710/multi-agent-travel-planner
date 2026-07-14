@@ -1,5 +1,4 @@
 import {
-  boolean,
   date,
   index,
   integer,

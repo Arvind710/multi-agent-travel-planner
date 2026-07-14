@@ -28,6 +28,12 @@ export default tseslint.config(
     },
   },
   {
+    files: ["**/*.test.ts", "**/*.test.tsx", "**/*.int.test.ts"],
+    rules: {
+      "@typescript-eslint/no-non-null-assertion": "off",
+    },
+  },
+  {
     // ARCH rule: external HTTP only through packages/integrations adapters.
     // dependency-cruiser catches http-client *imports*; this catches raw global fetch.
     files: ["packages/**/*.ts", "apps/api/**/*.ts", "apps/worker/**/*.ts"],
