@@ -8,6 +8,9 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
+    "@raah/agents": "workspace:*",
+    "@raah/kb": "workspace:^",
+    "@raah/plan-graph": "workspace:^",
     "@raah/shared": "workspace:*",
     "zod": "^4.4.3"
   },

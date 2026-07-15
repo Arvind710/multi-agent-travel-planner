@@ -8,14 +8,20 @@
   },
   "scripts": {
     "typecheck": "tsc",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run --passWithNoTests",
+    "validate": "tsx src/cli.ts validate",
+    "draft": "tsx src/cli.ts draft"
   },
   "dependencies": {
+    "@raah/constraints": "workspace:*",
     "@raah/db": "workspace:*",
+    "@raah/plan-graph": "workspace:*",
     "@raah/shared": "workspace:*",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
+    "tsx": "^4.23.1",
     "typescript": "~5.9.3",
     "vitest": "^4.1.10"
   }

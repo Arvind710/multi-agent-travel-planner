@@ -17,6 +17,7 @@
     "@opentelemetry/sdk-trace-node": "^2.9.0",
     "@raah/db": "workspace:*",
     "@raah/shared": "workspace:*",
+    "@raah/agents": "workspace:*",
     "@sentry/node": "^10.65.0",
     "@trpc/server": "^11.18.0",
     "bullmq": "^5.80.2",

@@ -17,7 +17,9 @@
     "boundaries": "depcruise apps packages tools --config .dependency-cruiser.cjs",
     "db:generate": "pnpm --filter @raah/db generate",
     "db:migrate": "pnpm --filter @raah/db migrate",
-    "db:seed": "pnpm --filter @raah/db seed"
+    "db:seed": "pnpm --filter @raah/db seed",
+    "kb:validate": "pnpm --filter @raah/kb validate",
+    "kb:draft": "pnpm --filter @raah/kb draft"
   },
   "pnpm": {
     "overrides": {

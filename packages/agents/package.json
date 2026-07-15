@@ -11,11 +11,15 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.15",
+    "@langchain/core": "^1.2.2",
+    "@langchain/langgraph": "^1.4.7",
     "@raah/constraints": "workspace:*",
     "@raah/integrations": "workspace:*",
     "@raah/kb": "workspace:*",
     "@raah/plan-graph": "workspace:*",
     "@raah/shared": "workspace:*",
+    "ai": "^7.0.27",
     "zod": "^4.4.3"
   },
   "devDependencies": {

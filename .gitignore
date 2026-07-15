@@ -21,3 +21,7 @@ coverage/
 # logs
 *.log
 .lighthouseci/
+
+# playwright artifacts
+apps/web/playwright-report/
+apps/web/test-results/
