@@ -1,0 +1,11 @@
+kind: region
+slug: sikkim-north
+name: North Sikkim
+country: IN
+climate_ref: sikkim-north
+road_realism_ref: himalayan
+meta: &meta
+  last_verified: "2026-07-15"
+  verified_by: founder
+  expires_at: "2028-07-15"
+  sources: [https://sikkim.gov.in/]

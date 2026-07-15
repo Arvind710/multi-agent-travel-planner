@@ -1,0 +1,26 @@
+kind: climate-calendar
+slug: arunachal
+name: Arunachal Pradesh climate calendar
+region: arunachal
+months:
+  {
+    "1": shoulder,
+    "2": shoulder,
+    "3": good,
+    "4": good,
+    "5": good,
+    "6": avoid,
+    "7": avoid,
+    "8": avoid,
+    "9": shoulder,
+    "10": good,
+    "11": good,
+    "12": shoulder,
+  }
+meta:
+  &meta {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://mausam.imd.gov.in/],
+  }

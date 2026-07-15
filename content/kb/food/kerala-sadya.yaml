@@ -1,0 +1,13 @@
+kind: food-atlas
+slug: kerala-sadya
+name: Kerala sadya
+region: kerala
+dishes: [sadya, avial, payasam]
+venues: []
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-07-15",
+    sources: [https://www.keralatourism.org/, https://www.incredibleindia.gov.in/],
+  }

@@ -1,0 +1,14 @@
+kind: monument
+slug: amber-fort
+name: Amber Fort
+region: rajasthan
+closed_weekdays: []
+closed_dates: []
+best_time: early morning for lower crowds and heat
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-01-15",
+    sources: [https://tourism.rajasthan.gov.in/],
+  }

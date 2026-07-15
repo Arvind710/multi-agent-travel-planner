@@ -1,0 +1,13 @@
+kind: park
+slug: ranthambore
+name: Ranthambore National Park
+region: rajasthan
+closed_months: [7, 8, 9]
+booking_window_days: 90
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-01-15",
+    sources: [https://forest.rajasthan.gov.in/],
+  }

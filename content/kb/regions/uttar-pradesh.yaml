@@ -1,0 +1,11 @@
+kind: region
+slug: uttar-pradesh
+name: Uttar Pradesh
+country: IN
+climate_ref: uttar-pradesh
+road_realism_ref: plains-highway
+meta: &meta
+  last_verified: "2026-07-15"
+  verified_by: founder
+  expires_at: "2028-07-15"
+  sources: [https://mausam.imd.gov.in/]

@@ -1,0 +1,126 @@
+kind: climate-calendar
+slug: india
+name: India climate calendar
+coverage:
+  andhra-pradesh:
+    &coastal {
+      "1": good,
+      "2": good,
+      "3": shoulder,
+      "4": avoid,
+      "5": avoid,
+      "6": shoulder,
+      "7": shoulder,
+      "8": shoulder,
+      "9": shoulder,
+      "10": good,
+      "11": good,
+      "12": good,
+    }
+  arunachal-pradesh:
+    &northeast {
+      "1": shoulder,
+      "2": shoulder,
+      "3": good,
+      "4": good,
+      "5": good,
+      "6": avoid,
+      "7": avoid,
+      "8": avoid,
+      "9": shoulder,
+      "10": good,
+      "11": good,
+      "12": shoulder,
+    }
+  assam: *northeast
+  bihar:
+    &plains {
+      "1": good,
+      "2": good,
+      "3": good,
+      "4": shoulder,
+      "5": avoid,
+      "6": avoid,
+      "7": shoulder,
+      "8": shoulder,
+      "9": shoulder,
+      "10": good,
+      "11": good,
+      "12": good,
+    }
+  chhattisgarh: *plains
+  goa:
+    &west-coast {
+      "1": good,
+      "2": good,
+      "3": good,
+      "4": shoulder,
+      "5": shoulder,
+      "6": avoid,
+      "7": avoid,
+      "8": avoid,
+      "9": shoulder,
+      "10": good,
+      "11": good,
+      "12": good,
+    }
+  gujarat: *plains
+  haryana: *plains
+  himachal-pradesh:
+    &himalaya {
+      "1": shoulder,
+      "2": shoulder,
+      "3": good,
+      "4": good,
+      "5": good,
+      "6": good,
+      "7": avoid,
+      "8": avoid,
+      "9": good,
+      "10": good,
+      "11": good,
+      "12": shoulder,
+    }
+  jharkhand: *plains
+  karnataka: *west-coast
+  madhya-pradesh: *plains
+  maharashtra: *west-coast
+  manipur: *northeast
+  meghalaya: *northeast
+  mizoram: *northeast
+  nagaland: *northeast
+  odisha: *plains
+  punjab: *plains
+  tamil-nadu:
+    &tamil {
+      "1": good,
+      "2": good,
+      "3": shoulder,
+      "4": avoid,
+      "5": avoid,
+      "6": shoulder,
+      "7": shoulder,
+      "8": shoulder,
+      "9": shoulder,
+      "10": avoid,
+      "11": avoid,
+      "12": good,
+    }
+  telangana: *plains
+  tripura: *northeast
+  uttarakhand: *himalaya
+  west-bengal: *plains
+  andaman-and-nicobar: *west-coast
+  chandigarh: *plains
+  dadra-and-nagar-haveli-and-daman-and-diu: *coastal
+  delhi: *plains
+  jammu-and-kashmir: *himalaya
+  lakshadweep: *west-coast
+  puducherry: *tamil
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://mausam.imd.gov.in/],
+  }

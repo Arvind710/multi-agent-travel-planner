@@ -1,0 +1,11 @@
+kind: region
+slug: kerala
+name: Kerala
+country: IN
+climate_ref: kerala
+road_realism_ref: ghats
+meta: &meta
+  last_verified: "2026-07-15"
+  verified_by: founder
+  expires_at: "2028-07-15"
+  sources: [https://mausam.imd.gov.in/]

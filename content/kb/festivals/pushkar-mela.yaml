@@ -1,0 +1,17 @@
+kind: festival
+slug: pushkar-mela
+name: Pushkar Fair
+dates_by_year:
+  "2026": { start: "2026-11-17", end: "2026-11-24" }
+  "2027": { start: "2027-11-06", end: "2027-11-13" }
+  "2028": { start: "2028-10-26", end: "2028-11-02" }
+surge_factor: 2.2
+impact_radius_km: 100
+regions: [rajasthan]
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-12-31",
+    sources: [https://tourism.rajasthan.gov.in/],
+  }

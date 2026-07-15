@@ -1,0 +1,15 @@
+kind: monument
+slug: taj-mahal
+name: Taj Mahal
+region: uttar-pradesh
+closed_weekdays: [5]
+closed_dates: []
+fees: { domestic_inr: 50, international_inr: 1100 }
+best_time: dawn, except Friday closure
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-01-15",
+    sources: [https://www.tajmahal.gov.in/],
+  }

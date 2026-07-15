@@ -1,0 +1,13 @@
+kind: park
+slug: periyar
+name: Periyar Tiger Reserve
+region: kerala
+closed_months: []
+booking_window_days: 90
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-01-15",
+    sources: [https://www.periyartigerreserve.org/],
+  }

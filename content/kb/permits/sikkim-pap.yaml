@@ -1,0 +1,14 @@
+kind: permit
+slug: sikkim-pap
+name: Protected Area Permit (North Sikkim)
+regions: [sikkim-north]
+applies_to: foreign
+lead_time_days: 21
+channel: registered tour operator
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2026-10-15",
+    sources: [https://sikkim.gov.in/],
+  }

@@ -1,0 +1,26 @@
+kind: climate-calendar
+slug: sikkim-north
+name: North Sikkim climate calendar
+region: sikkim-north
+months:
+  {
+    "1": closed,
+    "2": closed,
+    "3": shoulder,
+    "4": good,
+    "5": good,
+    "6": avoid,
+    "7": avoid,
+    "8": avoid,
+    "9": shoulder,
+    "10": good,
+    "11": shoulder,
+    "12": closed,
+  }
+meta:
+  &meta {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://sikkim.gov.in/],
+  }

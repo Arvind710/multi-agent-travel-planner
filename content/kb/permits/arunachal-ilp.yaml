@@ -1,0 +1,14 @@
+kind: permit
+slug: arunachal-ilp
+name: Inner Line Permit (Arunachal Pradesh)
+regions: [arunachal]
+applies_to: all
+lead_time_days: 14
+channel: online — ilp.arunachal.gov.in
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2026-10-15",
+    sources: [https://ilp.arunachal.gov.in/],
+  }

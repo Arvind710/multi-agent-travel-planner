@@ -24,6 +24,8 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm boundaries
+      # KB facts are reviewed YAML; reject invalid/expired-reference content before tests.
+      - run: pnpm kb:validate
       # ubuntu runners have Docker → the testcontainers db integration test runs here
       - run: pnpm exec turbo run typecheck test
         env:

@@ -1,0 +1,13 @@
+kind: road-realism
+slug: ghats
+name: Western Ghats road realism
+terrain: winding hill roads
+effective_kmph: 30
+regions: [kerala]
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://morth.nic.in/],
+  }

@@ -1,0 +1,13 @@
+kind: altitude
+slug: leh
+name: Leh altitude
+place: Leh
+region: ladakh
+sleeping_altitude_m: 3500
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://leh.nic.in/],
+  }

@@ -1,0 +1,14 @@
+kind: safety-note
+slug: jaipur-safety
+name: Jaipur arrival safety note
+region: rajasthan
+city: Jaipur
+arrival_guidance: Arrange an accommodation transfer or app-based ride for late arrivals.
+notes: [Keep hotel details available offline, Prefer pre-booked transport after late train arrivals]
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-01-15",
+    sources: [https://tourism.rajasthan.gov.in/],
+  }

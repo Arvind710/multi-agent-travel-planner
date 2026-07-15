@@ -1,0 +1,17 @@
+kind: festival
+slug: diwali
+name: Diwali
+dates_by_year:
+  "2026": { start: "2026-11-08", end: "2026-11-12" }
+  "2027": { start: "2027-10-28", end: "2027-11-01" }
+  "2028": { start: "2028-10-16", end: "2028-10-20" }
+surge_factor: 1.8
+impact_radius_km: 1000
+regions: []
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-12-31",
+    sources: [https://www.timeanddate.com/holidays/india/diwali],
+  }

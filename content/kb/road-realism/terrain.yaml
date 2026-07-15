@@ -1,0 +1,13 @@
+kind: road-realism
+slug: plains-highway
+name: Plains highway realism
+terrain: plains highway
+effective_kmph: 55
+regions: [rajasthan, uttar-pradesh]
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://morth.nic.in/],
+  }

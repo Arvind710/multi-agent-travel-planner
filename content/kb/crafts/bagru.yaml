@@ -1,0 +1,14 @@
+kind: craft-cluster
+slug: bagru-block-printing
+name: Bagru block printing
+region: rajasthan
+place: Bagru
+crafts: [hand-block-printing, natural-dyeing]
+ethics_note: Prefer workshops that explain artisan attribution and pricing.
+meta:
+  {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2027-07-15",
+    sources: [https://tourism.rajasthan.gov.in/, https://www.incredibleindia.gov.in/],
+  }

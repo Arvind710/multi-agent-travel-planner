@@ -1,0 +1,27 @@
+kind: climate-calendar
+slug: ladakh
+name: Ladakh climate calendar
+region: ladakh
+months:
+  {
+    "1": closed,
+    "2": closed,
+    "3": closed,
+    "4": shoulder,
+    "5": good,
+    "6": good,
+    "7": good,
+    "8": good,
+    "9": good,
+    "10": shoulder,
+    "11": closed,
+    "12": closed,
+  }
+nuance: Road access is generally winter-closed; flights and local conditions require live verification.
+meta:
+  &meta {
+    last_verified: "2026-07-15",
+    verified_by: founder,
+    expires_at: "2028-07-15",
+    sources: [https://leh.nic.in/],
+  }
