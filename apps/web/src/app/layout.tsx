@@ -35,8 +35,31 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       lang={locale}
       className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} ${devanagari.variable}`}
     >
-      <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+      <body className="min-h-screen bg-[var(--color-background)] flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          <header className="border-b bg-white">
+            <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+              <a
+                href="/"
+                className="text-xl font-bold font-[family-name:var(--font-google-fraunces)] text-[var(--color-primary)]"
+              >
+                Raah
+              </a>
+              <nav className="flex gap-4 text-sm font-medium">
+                <a href="/plan/new" className="hover:text-[var(--color-primary)]">
+                  Plan a Trip
+                </a>
+                <a href="/trips" className="hover:text-[var(--color-primary)]">
+                  My Trips
+                </a>
+                <a href="/profile" className="hover:text-[var(--color-primary)]">
+                  Personas
+                </a>
+              </nav>
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
