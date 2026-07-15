@@ -21,20 +21,24 @@ export class ModelRouter {
   public getModel(taskClass: TaskClass): LanguageModel {
     const flags = loadFlags();
     if (taskClass === "extraction") {
-      return google("gemini-2.5-flash"); // Flash is fast enough for extraction
+      return google("gemini-flash-latest"); // Flash is fast enough for extraction
     }
     if (taskClass === "curation") {
-      return google("gemini-2.5-pro"); // Using pro for curation to ensure high quality
+      // ADR-013 free-tier-first. Verified live 2026-07-15: gemini-2.5-pro has
+      // ZERO free quota and 2.5-flash 404s for new accounts — the -latest
+      // aliases are what new free keys can actually call.
+      return google("gemini-flash-latest");
     }
     if (taskClass === "critique") {
       if (flags.model.criticPaid && !flags.model.evalUsesFreeCritic) {
-        // Ideally openai("gpt-4o-mini") but we will use gemini as placeholder
-        return google("gemini-2.5-pro");
+        // Paid critic path (ADR-014: different family, e.g. OpenAI) — until a
+        // paid key exists this stays on flash; pro has no free quota.
+        return google("gemini-flash-latest");
       }
-      return google("gemini-2.5-flash");
+      return google("gemini-flash-latest");
     }
     // Fallback
-    return google("gemini-2.5-flash");
+    return google("gemini-flash-latest");
   }
 
   public async generateStructured<T>(
@@ -45,14 +49,14 @@ export class ModelRouter {
   ): Promise<{ data: T; usage: { prompt: number; completion: number } }> {
     const model = this.getModel(taskClass);
 
-    // Auto-retry once on validation failure is handled naturally by generateObject retries,
-    // but ai sdk maxRetries can be set.
+    // maxRetries 5 with the SDK's exponential backoff (~2+4+8+16+32s) rides
+    // out a full free-tier RPM window instead of failing the whole plan job.
     const result = await generateObject({
       model,
       schema,
       system,
       prompt,
-      maxRetries: 2,
+      maxRetries: 5,
     });
 
     return {
