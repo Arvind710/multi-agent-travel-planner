@@ -1,6 +1,6 @@
-import { and, eq } from "drizzle-orm";
+import { and, desc, eq } from "drizzle-orm";
 import type { Db } from "../client";
-import { tripMembers, trips } from "../schema";
+import { travellerProfiles, tripMembers, trips } from "../schema";
 
 export type TripRole = "owner" | "editor" | "commenter" | "viewer";
 
@@ -30,4 +30,40 @@ export async function getTripRole(
     .where(and(eq(tripMembers.tripId, tripId), eq(tripMembers.userId, userId)))
     .limit(1);
   return membership?.role ?? null;
+}
+
+/** Create a trip for a signed-in or anonymous session; returns the trip id. */
+export async function createTrip(
+  db: Db,
+  input: { ownerId?: string; anonymousSessionId?: string; title?: string },
+): Promise<string> {
+  const [trip] = await db
+    .insert(trips)
+    .values({
+      ownerId: input.ownerId ?? null,
+      anonymousSessionId: input.anonymousSessionId ?? null,
+      title: input.title ?? null,
+      status: "generating",
+    })
+    .returning({ id: trips.id });
+  if (!trip) throw new Error("trip insert returned no row");
+  return trip.id;
+}
+
+export async function setTripStatus(
+  db: Db,
+  tripId: string,
+  status: "draft" | "generating" | "active" | "archived",
+): Promise<void> {
+  await db.update(trips).set({ status }).where(eq(trips.id, tripId));
+}
+
+/** All trips owned by a user, newest first. */
+export async function listTripsByOwner(db: Db, ownerId: string) {
+  return db.select().from(trips).where(eq(trips.ownerId, ownerId)).orderBy(desc(trips.createdAt));
+}
+
+/** A user's saved traveller personas. */
+export async function listTravellerProfiles(db: Db, userId: string) {
+  return db.select().from(travellerProfiles).where(eq(travellerProfiles.userId, userId));
 }

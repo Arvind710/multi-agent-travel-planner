@@ -271,6 +271,23 @@ export const shareLinks = pgTable(
   (t) => [index("share_links_trip_idx").on(t.tripId)],
 );
 
+// ── comments (per-block comments for shared plans, ARCH §11) ─────────────────
+export const comments = pgTable(
+  "comments",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    tripId: uuid("trip_id")
+      .notNull()
+      .references(() => trips.id, { onDelete: "cascade" }),
+    authorId: uuid("author_id").references(() => users.id, { onDelete: "set null" }), // Nullable for anonymous/external
+    authorName: text("author_name").notNull(),
+    nodeRef: text("node_ref").notNull(), // e.g. "block_123"
+    content: text("content").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("comments_trip_idx").on(t.tripId), index("comments_node_idx").on(t.nodeRef)],
+);
+
 // ── audit log (admin/KB actions, ARCH §11) ───────────────────────────────────
 export const auditLog = pgTable("audit_log", {
   id: uuid("id").primaryKey().defaultRandom(),

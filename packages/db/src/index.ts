@@ -5,7 +5,23 @@
 export * from "./schema";
 export { createDb, pingDb, type Db } from "./client";
 export { runMigrations } from "./migrate";
-export { getTripRole, roleAtLeast, type TripRole } from "./repos/trips";
+export {
+  getTripRole,
+  roleAtLeast,
+  createTrip,
+  setTripStatus,
+  listTripsByOwner,
+  listTravellerProfiles,
+  type TripRole,
+} from "./repos/trips";
+export {
+  createShareLink,
+  getShareLink,
+  listTripComments,
+  addTripComment,
+  type ShareLink,
+  type TripComment,
+} from "./repos/share";
 export {
   savePlanGraphVersion,
   loadPlanGraph,
@@ -15,3 +31,4 @@ export {
   PlanGraphValidationError,
   type PlanGraphVersionInfo,
 } from "./repos/planGraphs";
+export { upsertKbEntity, type KbUpsertInput } from "./repos/kb";
