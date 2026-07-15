@@ -9,10 +9,17 @@ import { context as otelContext, trace } from "@opentelemetry/api";
 import { Worker, type Processor } from "bullmq";
 import { Redis } from "ioredis";
 import { loadEnv } from "@raah/shared/env";
+import { createDb, upsertKbEntity } from "@raah/db";
+import { ingest, validateContent } from "@raah/kb";
+import { fileURLToPath } from "node:url";
 import { publishJobEvent } from "@raah/shared/events";
 import { extractTraceContext } from "@raah/shared/telemetry";
 import { logger } from "./logger";
 import { QUEUE, queueConcurrency, type QueueName } from "./queues";
+import { processPlanGenerateJob } from "./jobs/plan-generate";
+
+/** Repo-root content dir — cwd under turbo is apps/worker, so anchor to this file. */
+const CONTENT_ROOT = fileURLToPath(new URL("../../../content/kb", import.meta.url));
 
 const tracer = trace.getTracer("raah-worker");
 
@@ -22,14 +29,15 @@ const env = loadEnv();
 const connection = new Redis(env.REDIS_URL, { maxRetriesPerRequest: null });
 /** Separate connection for event publishing (never blocked by BullMQ). */
 const events = new Redis(env.REDIS_URL);
+const { db, pool } = createDb(env.DATABASE_URL);
 
 connection.on("error", (e) => logger.warn({ err: e.message }, "redis (bullmq) error"));
 events.on("error", (e) => logger.warn({ err: e.message }, "redis (events) error"));
 
 /**
- * No-op plan.generate processor (P0.7): emits SSE heartbeats so the whole
- * queue→events→SSE→UI pipeline is provable before any agent exists.
- * Replaced by the real LangGraph pipeline in P3.
+ * plan.generate: the real KB-grounded pipeline (P3.9). The P0.7 heartbeat
+ * path stays behind `kind: "heartbeat-smoke"` — it proves queue→SSE plumbing
+ * without an LLM key and backs the P0 exit-gate helper.
  */
 const planGenerateProcessor: Processor = async (job) => {
   const jobId = String(job.id);
@@ -38,6 +46,17 @@ const planGenerateProcessor: Processor = async (job) => {
   await otelContext.with(parent, () =>
     tracer.startActiveSpan("plan.generate", async (span) => {
       try {
+        if ((job.data as { kind?: string }).kind === "plan-generate") {
+          logger.info({ jobId }, "plan.generate pipeline job started");
+          await processPlanGenerateJob({
+            job,
+            db,
+            contentRoot: CONTENT_ROOT,
+            publish: (event) => publishJobEvent(events, jobId, event),
+          });
+          logger.info({ jobId }, "plan.generate pipeline job finished");
+          return;
+        }
         logger.info({ jobId }, "plan.generate heartbeat job started");
         for (let i = 1; i <= 8; i++) {
           await publishJobEvent(events, jobId, {
@@ -61,12 +80,26 @@ const noopProcessor =
     logger.info({ queue, jobId: job.id }, "no-op processor (implemented in a later phase)");
   };
 
+/** P2.6: validate → idempotently upsert → update the Redis retrieval version. */
+const kbIngestProcessor: Processor = async () => {
+  const content = await validateContent(CONTENT_ROOT);
+  if (content.issues.length)
+    throw new Error(
+      `KB validation failed: ${content.issues.map((i) => `${i.file}: ${i.message}`).join(" | ")}`,
+    );
+  const report = await ingest(content.entities, {
+    upsert: (record) => upsertKbEntity(db, { ...record, kbVersion: 0 }),
+    bumpVersion: async () => Number(await events.incr("kb:version")),
+  });
+  logger.info(report, "kb.ingest completed");
+};
+
 const processors: Record<QueueName, Processor> = {
   [QUEUE.planGenerate]: planGenerateProcessor,
   [QUEUE.planRevise]: noopProcessor(QUEUE.planRevise),
   [QUEUE.planExport]: noopProcessor(QUEUE.planExport),
   [QUEUE.watchPrice]: noopProcessor(QUEUE.watchPrice),
-  [QUEUE.kbIngest]: noopProcessor(QUEUE.kbIngest),
+  [QUEUE.kbIngest]: kbIngestProcessor,
   [QUEUE.notify]: noopProcessor(QUEUE.notify),
 };
 
@@ -93,7 +126,7 @@ for (const signal of ["SIGINT", "SIGTERM"] as const) {
     shuttingDown = true;
     logger.info({ signal }, "graceful shutdown: closing workers");
     void Promise.all(workers.map((w) => w.close()))
-      .then(() => Promise.all([connection.quit(), events.quit()]))
+      .then(() => Promise.all([connection.quit(), events.quit(), pool.end()]))
       .then(() => process.exit(0))
       .catch(() => process.exit(1));
   });

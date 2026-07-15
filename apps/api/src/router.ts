@@ -1,6 +1,9 @@
 import { pingDb } from "@raah/db";
 import { enqueuePlanGenerate } from "./jobs";
 import { publicProcedure, router } from "./trpc";
+import { intakeRouter } from "./routers/intake";
+import { planRouter } from "./routers/plan";
+import { shareRouter } from "./routers/share";
 
 /**
  * Root tRPC router. Domain routers (trip, intake, plan, export, watch, profile)
@@ -12,6 +15,9 @@ export const appRouter = router({
     await pingDb(ctx.db);
     return { db: "ok" as const };
   }),
+  intake: intakeRouter,
+  plan: planRouter,
+  share: shareRouter,
   dev: router({
     /** P0 exit-gate helper: enqueue the heartbeat job and watch it stream on /api/jobs/:id/events. */
     enqueueHeartbeat: publicProcedure.mutation(async () => {
