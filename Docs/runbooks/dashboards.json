@@ -1,0 +1,18 @@
+{
+  "dashboards": [
+    {
+      "name": "P8 SLO Burn",
+      "panels": [
+        { "title": "Latency p95", "metric": "http_request_duration_seconds" },
+        { "title": "Error Rate", "metric": "http_requests_total{status=~\"5..\"}" }
+      ]
+    },
+    {
+      "name": "Cost Metrics",
+      "panels": [
+        { "title": "Daily Token Cost", "metric": "llm_cost_daily" },
+        { "title": "Provider Quota Usage", "metric": "provider_api_calls_total" }
+      ]
+    }
+  ]
+}
