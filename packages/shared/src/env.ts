@@ -32,6 +32,7 @@ const EnvSchema = z.object({
   GOOGLE_CLIENT_ID: z.string().optional(),
   GOOGLE_CLIENT_SECRET: z.string().optional(),
   AUTH_RESEND_KEY: z.string().optional(),
+  GOOGLE_MAPS_API_KEY: z.string().optional(),
   EMAIL_FROM: z.string().default("Raah <onboarding@resend.dev>"),
 
   PLAN_GENERATE_CONCURRENCY: z.coerce.number().int().positive().default(1),
@@ -45,6 +46,10 @@ const EnvSchema = z.object({
   GEMINI_API_KEY: z.string().optional(),
   GROQ_API_KEY: z.string().optional(),
   OPENAI_API_KEY: z.string().optional(),
+
+  FLAG_FEATURES_PRICING: z.string().optional().default("false"),
+  FLAG_FEATURES_PRICE_WATCH: z.string().optional().default("false"),
+  FLAG_FEATURES_LOW_BANDWIDTH: z.string().optional().default("false"),
 
   SENTRY_DSN: z.string().optional(),
   LANGFUSE_PUBLIC_KEY: z.string().optional(),

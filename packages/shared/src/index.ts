@@ -10,4 +10,6 @@ export * from "./profile";
 export * from "./result";
 export * from "./events";
 export * from "./flags";
+export * from "./crypto";
 export * from "./telemetry";
+export * from "./export";
